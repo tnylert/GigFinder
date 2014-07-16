@@ -16,23 +16,57 @@
     // NSURLSession
     NSString *lastfmAPIKey = @"a2a238ddf3f5ac1370141bd0e3e3e646";
     NSString *eventURL = [NSString stringWithFormat:@"http://ws.audioscrobbler.com/2.0/?method=event.getinfo&event=328799&api_key=%@&format=json", lastfmAPIKey];
-    __block NSString *jsonResponse;
+    //NSString *eventURL = [NSString stringWithFormat:@"http://api.kivaws.org/v1/loans/search.json?status=fundraising"];
+    __block NSDictionary *jsonResponse;
     NSURLSession *session = [NSURLSession sharedSession];
     [[session dataTaskWithURL:[NSURL URLWithString:eventURL]
             completionHandler:^(NSData *data,
                                 NSURLResponse *response,
                                 NSError *error) {
-                // handle response
-                jsonResponse = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-                NSLog(@"%@", jsonResponse);
+                jsonResponse = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
+                NSLog(@"RESPONSE: %@", jsonResponse);
+
+                
+                NSDictionary* json = [NSJSONSerialization
+                                      JSONObjectWithData:data
+                                      options:kNilOptions
+                                      error:&error];
+                
+                NSDictionary *event = [json objectForKey:@"event"];
+                NSLog(@"eventt: %@", event);
+                
+                NSDictionary *artists = [event objectForKey:@"artists"];
+                NSLog(@"artists: %@", artists);
+                
+                NSDictionary *singerEventlocation = [(NSDictionary*)[event objectForKey:@"venue"] objectForKey:@"location"];
+
+                NSDictionary *allSingerInfo = [NSDictionary dictionaryWithObjectsAndKeys:
+                                               [artists objectForKey:@"headliner"],
+                                               @"singerName",
+                                               [event objectForKey:@"id"],
+                                               @"singerID",
+                                               [event objectForKey:@"startDate"],
+                                               @"singerEventStartDate",
+                                               [event objectForKey:@"url"],
+                                               @"SingerEventURL",
+                                               [singerEventlocation objectForKey:@"city"],
+                                               @"city",
+                                               [singerEventlocation objectForKey:@"country"],
+                                               @"country",
+                                               [(NSDictionary*)[singerEventlocation objectForKey:@"geo:point"] objectForKey:@"geo:lat"],
+                                               @"latitude",
+                                               [(NSDictionary*)[singerEventlocation objectForKey:@"geo:point"] objectForKey:@"geo:long"],
+                                               @"longtitude",
+                                               [(NSDictionary*)[event objectForKey:@"venue"] objectForKey:@"name"],
+                                               @"eventLocationName",
+                                               [(NSDictionary*)[event objectForKey:@"venue"] objectForKey:@"phonenumber"],
+                                               @"eventPhoneNumber",
+                                               nil];
+                
+                NSLog(@"allSingerInfo: %@", allSingerInfo);
+                
+                
             }] resume];
-    
-    // Parse the string into JSON
-    //NSDictionary *json = [jsonResponse JSONValue];
-    
-    // Get the objects you want, e.g. output the second item's client id
-    //NSArray *items = [json valueForKeyPath:@"data.array"];
-    //NSLog(@" client Id : %@", [[items objectAtIndex:1] objectForKey:@"clientId"]);
     
     // If completed without error parse to US2Event
     
