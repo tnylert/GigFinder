@@ -19,6 +19,11 @@
 		2B7E2F9A1976D13400CB7E5B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B7E2F821976D13400CB7E5B /* UIKit.framework */; };
 		2B7E2FA21976D13400CB7E5B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2B7E2FA01976D13400CB7E5B /* InfoPlist.strings */; };
 		2B7E2FA41976D13400CB7E5B /* GigFinderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B7E2FA31976D13400CB7E5B /* GigFinderTests.m */; };
+		2B7E2FB31976D2DE00CB7E5B /* US2EventListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B7E2FB21976D2DE00CB7E5B /* US2EventListViewController.m */; };
+		2B7E2FB61976D32500CB7E5B /* US2Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B7E2FB51976D32500CB7E5B /* US2Event.m */; };
+		2B7E2FB91976D35C00CB7E5B /* US2EventProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B7E2FB81976D35C00CB7E5B /* US2EventProxy.m */; };
+		2B7E2FBC1976D3D600CB7E5B /* US2EventListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B7E2FBB1976D3D600CB7E5B /* US2EventListView.m */; };
+		2B7E2FBE1976D3F200CB7E5B /* US2Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B7E2FBD1976D3F200CB7E5B /* US2Storyboard.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +53,15 @@
 		2B7E2F9F1976D13400CB7E5B /* GigFinderTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GigFinderTests-Info.plist"; sourceTree = "<group>"; };
 		2B7E2FA11976D13400CB7E5B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2B7E2FA31976D13400CB7E5B /* GigFinderTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GigFinderTests.m; sourceTree = "<group>"; };
+		2B7E2FB11976D2DE00CB7E5B /* US2EventListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = US2EventListViewController.h; sourceTree = "<group>"; };
+		2B7E2FB21976D2DE00CB7E5B /* US2EventListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = US2EventListViewController.m; sourceTree = "<group>"; };
+		2B7E2FB41976D32500CB7E5B /* US2Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = US2Event.h; sourceTree = "<group>"; };
+		2B7E2FB51976D32500CB7E5B /* US2Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = US2Event.m; sourceTree = "<group>"; };
+		2B7E2FB71976D35C00CB7E5B /* US2EventProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = US2EventProxy.h; sourceTree = "<group>"; };
+		2B7E2FB81976D35C00CB7E5B /* US2EventProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = US2EventProxy.m; sourceTree = "<group>"; };
+		2B7E2FBA1976D3D600CB7E5B /* US2EventListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = US2EventListView.h; sourceTree = "<group>"; };
+		2B7E2FBB1976D3D600CB7E5B /* US2EventListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = US2EventListView.m; sourceTree = "<group>"; };
+		2B7E2FBD1976D3F200CB7E5B /* US2Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = US2Storyboard.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +121,7 @@
 		2B7E2F841976D13400CB7E5B /* GigFinder */ = {
 			isa = PBXGroup;
 			children = (
+				2B7E2FAD1976D21E00CB7E5B /* EventList */,
 				2B7E2F8D1976D13400CB7E5B /* AppDelegate.h */,
 				2B7E2F8E1976D13400CB7E5B /* AppDelegate.m */,
 				2B7E2F901976D13400CB7E5B /* Images.xcassets */,
@@ -142,6 +157,70 @@
 				2B7E2FA01976D13400CB7E5B /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2B7E2FAD1976D21E00CB7E5B /* EventList */ = {
+			isa = PBXGroup;
+			children = (
+				2B7E2FBF1976D3F700CB7E5B /* Resources */,
+				2B7E2FB01976D25100CB7E5B /* View */,
+				2B7E2FAF1976D24B00CB7E5B /* Controller */,
+				2B7E2FAE1976D24000CB7E5B /* Model */,
+			);
+			name = EventList;
+			sourceTree = "<group>";
+		};
+		2B7E2FAE1976D24000CB7E5B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2B7E2FB41976D32500CB7E5B /* US2Event.h */,
+				2B7E2FB51976D32500CB7E5B /* US2Event.m */,
+				2B7E2FB71976D35C00CB7E5B /* US2EventProxy.h */,
+				2B7E2FB81976D35C00CB7E5B /* US2EventProxy.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		2B7E2FAF1976D24B00CB7E5B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2B7E2FB11976D2DE00CB7E5B /* US2EventListViewController.h */,
+				2B7E2FB21976D2DE00CB7E5B /* US2EventListViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		2B7E2FB01976D25100CB7E5B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2B7E2FBA1976D3D600CB7E5B /* US2EventListView.h */,
+				2B7E2FBB1976D3D600CB7E5B /* US2EventListView.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		2B7E2FBF1976D3F700CB7E5B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2B7E2FC21976D41E00CB7E5B /* Storyboards */,
+				2B7E2FC01976D40200CB7E5B /* Images */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		2B7E2FC01976D40200CB7E5B /* Images */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		2B7E2FC21976D41E00CB7E5B /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				2B7E2FBD1976D3F200CB7E5B /* US2Storyboard.storyboard */,
+			);
+			name = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -221,6 +300,7 @@
 			files = (
 				2B7E2F891976D13400CB7E5B /* InfoPlist.strings in Resources */,
 				2B7E2F911976D13400CB7E5B /* Images.xcassets in Resources */,
+				2B7E2FBE1976D3F200CB7E5B /* US2Storyboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,8 +319,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B7E2FBC1976D3D600CB7E5B /* US2EventListView.m in Sources */,
 				2B7E2F8F1976D13400CB7E5B /* AppDelegate.m in Sources */,
+				2B7E2FB91976D35C00CB7E5B /* US2EventProxy.m in Sources */,
+				2B7E2FB61976D32500CB7E5B /* US2Event.m in Sources */,
 				2B7E2F8B1976D13400CB7E5B /* main.m in Sources */,
+				2B7E2FB31976D2DE00CB7E5B /* US2EventListViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,6 +521,7 @@
 				2B7E2FA91976D13400CB7E5B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2B7E2FAA1976D13400CB7E5B /* Build configuration list for PBXNativeTarget "GigFinderTests" */ = {
 			isa = XCConfigurationList;
@@ -445,6 +530,7 @@
 				2B7E2FAC1976D13400CB7E5B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
