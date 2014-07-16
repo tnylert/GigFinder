@@ -10,4 +10,20 @@
 
 @implementation US2EventProxy
 
+- (void)retrieveAllArtists
+{
+    // NSURLSession
+    
+    // If completed without error parse to US2Event
+    
+    if (YES)
+    {
+        if ([self.delegate respondsToSelector:@selector(eventProxy:retrievedArtists:)])
+        {
+            NSArray *artists = @[];
+            [self.delegate eventProxy:self retrievedArtists:artists];
+        }
+    }
+}
+
 @end

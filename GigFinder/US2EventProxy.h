@@ -8,6 +8,23 @@
 
 #import <Foundation/Foundation.h>
 
+@protocol US2EventProxyDelegate;
+
+
 @interface US2EventProxy : NSObject
+
+@property (nonatomic, weak) id<US2EventProxyDelegate> delegate;
+
+- (void)retrieveAllArtists;
+
+- (void)retrieveArtistByName:(NSString *)name;
+
+@end
+
+
+@protocol US2EventProxyDelegate <NSObject>
+
+@optional
+- (void)eventProxy:(US2EventProxy *)eventProxy retrievedArtists:(NSArray *)artists;
 
 @end

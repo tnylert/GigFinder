@@ -7,43 +7,44 @@
 //
 
 #import "US2EventListViewController.h"
+#import "US2EventProxy.h"
 
-@interface US2EventListViewController ()
-
+@interface US2EventListViewController () <US2EventProxyDelegate, UITableViewDataSource, UITableViewDelegate>
+@property (nonatomic, strong, readwrite) US2EventProxy *eventProxy;
 @end
 
 @implementation US2EventListViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    self.eventProxy = [[US2EventProxy alloc] init];
+    self.eventProxy.delegate = self;
+    [self.eventProxy retrieveAllArtists];
 }
 
-- (void)didReceiveMemoryWarning
+#pragma mark - Event proxy
+
+- (void)eventProxy:(US2EventProxy *)eventProxy retrievedArtists:(NSArray *)artists
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    NSLog(@"retrievedArtists: %@", artists);
 }
 
-/*
-#pragma mark - Navigation
+#pragma mark - Table view data source
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    return 1;
 }
-*/
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
+    cell.textLabel.text = @"test";
+    return cell;
+}
+
+#pragma mark - Table view delegate
 
 @end

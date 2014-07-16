@@ -10,4 +10,6 @@
 
 @interface US2Event : NSObject
 
+@property (nonatomic, copy, readwrite) NSString *name;
+
 @end

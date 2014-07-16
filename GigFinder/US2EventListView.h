@@ -10,4 +10,6 @@
 
 @interface US2EventListView : UIView
 
+@property (nonatomic, weak, readwrite) IBOutlet UITableView *tableView;
+
 @end
