@@ -15,6 +15,8 @@
     [super awakeFromNib];
     
     NSLog(@"awakefromnib");
+    
+    
 }
 
 @end

@@ -15,9 +15,7 @@
 
 @property (nonatomic, weak) id<US2EventProxyDelegate> delegate;
 
-- (void)retrieveAllArtists;
-
-- (void)retrieveArtistByName:(NSString *)name;
+- (void)retrieveEventsOfArtist:(NSString *)artist;
 
 @end
 
@@ -25,6 +23,6 @@
 @protocol US2EventProxyDelegate <NSObject>
 
 @optional
-- (void)eventProxy:(US2EventProxy *)eventProxy retrievedArtists:(NSArray *)artists;
+- (void)eventProxy:(US2EventProxy *)eventProxy retrievedArtists:(NSDictionary *)artists;
 
 @end
