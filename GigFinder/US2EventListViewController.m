@@ -29,9 +29,6 @@
     
     self.navigationController.navigationBar.translucent = NO;
     self.title = @"GigFinder";
-    
-    checkFirstTimer = @"0";
-    
 }
 
 #pragma mark - Event proxy
@@ -74,20 +71,27 @@
         NSDictionary *artistInfo = [self.artists objectAtIndex:indexPath.row];
         
         
-        cell.textLabel.text = [artistInfo objectForKey:@"artistName"];
+        cell.textLabel.text = [artistInfo objectForKey:@"artistEventLocationName"];
         //cell.detailTextLabel.text = [item objectForKey:@"secondaryTitleKey"];
         //NSString *path = [[NSBundle mainBundle] pathForResource:[item objectForKey:@"imageKey"] ofType:@"png"];
         //UIImage *theImage = [UIImage imageWithContentsOfFile:path];
 
         // TODO: (TL) fix this code
+    
         
-//        NSURL *url = [NSURL URLWithString:@"http://userserve-ak.last.fm/serve/126/98245551.png"]; //[artistInfo objectForKey:@"artistImage"]];
-//        NSData *data = [NSData dataWithContentsOfURL:url];
-//        UIImage *artistImage = [UIImage imageWithData:data];
-//        cell.imageView.image = artistImage;
+        dispatch_queue_t backgroundQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0);
+        
+        dispatch_async(backgroundQueue, ^{
+            NSURL *url = [NSURL URLWithString:[artistInfo objectForKey:@"artisEventtImage"]];
+            NSData *data = [NSData dataWithContentsOfURL:url];
+            UIImage *artistImage = [UIImage imageWithData:data];
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                cell.imageView.image = artistImage;
+            });
+        });
         
         NSLog(@"LOG: name: %@", self.artists);
-        //checkFirstTimer = 1;
     }
     
     
