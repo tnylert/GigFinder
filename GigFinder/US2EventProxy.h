@@ -23,6 +23,6 @@
 @protocol US2EventProxyDelegate <NSObject>
 
 @optional
-- (void)eventProxy:(US2EventProxy *)eventProxy retrievedArtists:(NSDictionary *)artists;
+- (void)eventProxy:(US2EventProxy *)eventProxy retrievedArtists:(NSArray *)artists;
 
 @end

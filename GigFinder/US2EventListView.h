@@ -9,10 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface US2EventListView : UIView
-{
-}
 
 @property (nonatomic, weak, readwrite) IBOutlet UITableView *tableView;
-
+@property (nonatomic, weak, readwrite) IBOutlet UISearchBar *searchBar;
 
 @end

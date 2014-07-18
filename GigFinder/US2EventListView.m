@@ -9,14 +9,4 @@
 #import "US2EventListView.h"
 
 @implementation US2EventListView
-
-- (void)awakeFromNib
-{
-    [super awakeFromNib];
-    
-    NSLog(@"awakefromnib");
-    
-    
-}
-
 @end

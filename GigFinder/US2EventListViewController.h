@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+@class US2EventListView;
+
 
 @interface US2EventListViewController : UIViewController
+@property (nonatomic, weak, readwrite) IBOutlet US2EventListView *eventListView;
 @end
