@@ -7,9 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <MapKit/MKAnnotation.h>
+
 
 @interface US2Event : NSObject
 
-@property (nonatomic, copy, readwrite) NSString *name;
+@property (nonatomic, strong, readwrite) NSMutableArray *placeName;
+@property (nonatomic, strong, readwrite) NSMutableArray *placeDate;
 
 @end

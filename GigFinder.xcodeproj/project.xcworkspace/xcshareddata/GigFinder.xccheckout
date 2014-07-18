@@ -17,6 +17,8 @@
 	<string>GigFinder/GigFinder.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
+		<key>E3F039AD-B6C3-40FC-A7A9-BFF30BA84408</key>
+		<string>../../../Downloads/CarApp</string>
 		<key>FF0CDE68-3800-4715-9DF2-5239636B45C8</key>
 		<string>../../..</string>
 	</dict>
@@ -28,6 +30,14 @@
 	<string>FF0CDE68-3800-4715-9DF2-5239636B45C8</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>E3F039AD-B6C3-40FC-A7A9-BFF30BA84408</string>
+			<key>IDESourceControlWCCName</key>
+			<string>CarApp</string>
+		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>

@@ -24,6 +24,18 @@
 		2B7E2FB91976D35C00CB7E5B /* US2EventProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B7E2FB81976D35C00CB7E5B /* US2EventProxy.m */; };
 		2B7E2FBC1976D3D600CB7E5B /* US2EventListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B7E2FBB1976D3D600CB7E5B /* US2EventListView.m */; };
 		2B7E2FBE1976D3F200CB7E5B /* US2Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B7E2FBD1976D3F200CB7E5B /* US2Storyboard.storyboard */; };
+		2B7E2FCF19791BD000CB7E5B /* AsyncImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B7E2FCE19791BD000CB7E5B /* AsyncImageView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		2B7E2FD219791FD700CB7E5B /* US2EventDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B7E2FD119791FD700CB7E5B /* US2EventDetailViewController.m */; };
+		2B7E2FD619792ABD00CB7E5B /* calendar.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2B7E2FD519792ABD00CB7E5B /* calendar.jpg */; };
+		2B7E2FD819792CAE00CB7E5B /* emptycalendar.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B7E2FD719792CAE00CB7E5B /* emptycalendar.png */; };
+		2B7E2FDC19792EAD00CB7E5B /* button.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B7E2FDB19792EAD00CB7E5B /* button.png */; };
+		2B7E2FDE19792F0200CB7E5B /* mapicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B7E2FDD19792F0200CB7E5B /* mapicon.png */; };
+		2B7E2FE119792FD200CB7E5B /* US2EventDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B7E2FE019792FD200CB7E5B /* US2EventDetailView.m */; };
+		2B7E2FE3197955BA00CB7E5B /* noimage.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B7E2FE2197955BA00CB7E5B /* noimage.png */; };
+		2B7E2FEE19795B9B00CB7E5B /* US2EventMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B7E2FED19795B9B00CB7E5B /* US2EventMapView.m */; };
+		2B7E2FF119795BE800CB7E5B /* US2EventMapProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B7E2FF019795BE800CB7E5B /* US2EventMapProxy.m */; };
+		2B7E2FF419795DB600CB7E5B /* US2EventMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B7E2FF319795DB600CB7E5B /* US2EventMapViewController.m */; };
+		2B7E2FF719796CD000CB7E5B /* Pin.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B7E2FF619796CD000CB7E5B /* Pin.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +74,25 @@
 		2B7E2FBA1976D3D600CB7E5B /* US2EventListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = US2EventListView.h; sourceTree = "<group>"; };
 		2B7E2FBB1976D3D600CB7E5B /* US2EventListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = US2EventListView.m; sourceTree = "<group>"; };
 		2B7E2FBD1976D3F200CB7E5B /* US2Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = US2Storyboard.storyboard; sourceTree = "<group>"; };
+		2B7E2FCD19791BD000CB7E5B /* AsyncImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AsyncImageView.h; path = ../../Downloads/AsyncImage/AsyncImageView.h; sourceTree = "<group>"; };
+		2B7E2FCE19791BD000CB7E5B /* AsyncImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AsyncImageView.m; path = ../../Downloads/AsyncImage/AsyncImageView.m; sourceTree = "<group>"; };
+		2B7E2FD019791FD700CB7E5B /* US2EventDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = US2EventDetailViewController.h; sourceTree = "<group>"; };
+		2B7E2FD119791FD700CB7E5B /* US2EventDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = US2EventDetailViewController.m; sourceTree = "<group>"; };
+		2B7E2FD519792ABD00CB7E5B /* calendar.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = calendar.jpg; sourceTree = "<group>"; };
+		2B7E2FD719792CAE00CB7E5B /* emptycalendar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emptycalendar.png; sourceTree = "<group>"; };
+		2B7E2FDB19792EAD00CB7E5B /* button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button.png; sourceTree = "<group>"; };
+		2B7E2FDD19792F0200CB7E5B /* mapicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mapicon.png; sourceTree = "<group>"; };
+		2B7E2FDF19792FD200CB7E5B /* US2EventDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = US2EventDetailView.h; sourceTree = "<group>"; };
+		2B7E2FE019792FD200CB7E5B /* US2EventDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = US2EventDetailView.m; sourceTree = "<group>"; };
+		2B7E2FE2197955BA00CB7E5B /* noimage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = noimage.png; sourceTree = "<group>"; };
+		2B7E2FEC19795B9B00CB7E5B /* US2EventMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = US2EventMapView.h; sourceTree = "<group>"; };
+		2B7E2FED19795B9B00CB7E5B /* US2EventMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = US2EventMapView.m; sourceTree = "<group>"; };
+		2B7E2FEF19795BE800CB7E5B /* US2EventMapProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = US2EventMapProxy.h; sourceTree = "<group>"; };
+		2B7E2FF019795BE800CB7E5B /* US2EventMapProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = US2EventMapProxy.m; sourceTree = "<group>"; };
+		2B7E2FF219795DB600CB7E5B /* US2EventMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = US2EventMapViewController.h; sourceTree = "<group>"; };
+		2B7E2FF319795DB600CB7E5B /* US2EventMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = US2EventMapViewController.m; sourceTree = "<group>"; };
+		2B7E2FF519796CD000CB7E5B /* Pin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pin.h; sourceTree = "<group>"; };
+		2B7E2FF619796CD000CB7E5B /* Pin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Pin.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,10 +152,12 @@
 		2B7E2F841976D13400CB7E5B /* GigFinder */ = {
 			isa = PBXGroup;
 			children = (
+				2B7E2FE51979577400CB7E5B /* AllEventFromArtist */,
 				2B7E2FAD1976D21E00CB7E5B /* EventList */,
 				2B7E2F8D1976D13400CB7E5B /* AppDelegate.h */,
 				2B7E2F8E1976D13400CB7E5B /* AppDelegate.m */,
 				2B7E2F901976D13400CB7E5B /* Images.xcassets */,
+				2B7E2FBF1976D3F700CB7E5B /* Resources */,
 				2B7E2F851976D13400CB7E5B /* Supporting Files */,
 			);
 			path = GigFinder;
@@ -162,7 +195,6 @@
 		2B7E2FAD1976D21E00CB7E5B /* EventList */ = {
 			isa = PBXGroup;
 			children = (
-				2B7E2FBF1976D3F700CB7E5B /* Resources */,
 				2B7E2FB01976D25100CB7E5B /* View */,
 				2B7E2FAF1976D24B00CB7E5B /* Controller */,
 				2B7E2FAE1976D24000CB7E5B /* Model */,
@@ -186,6 +218,8 @@
 			children = (
 				2B7E2FB11976D2DE00CB7E5B /* US2EventListViewController.h */,
 				2B7E2FB21976D2DE00CB7E5B /* US2EventListViewController.m */,
+				2B7E2FD019791FD700CB7E5B /* US2EventDetailViewController.h */,
+				2B7E2FD119791FD700CB7E5B /* US2EventDetailViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -195,6 +229,8 @@
 			children = (
 				2B7E2FBA1976D3D600CB7E5B /* US2EventListView.h */,
 				2B7E2FBB1976D3D600CB7E5B /* US2EventListView.m */,
+				2B7E2FDF19792FD200CB7E5B /* US2EventDetailView.h */,
+				2B7E2FE019792FD200CB7E5B /* US2EventDetailView.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -202,6 +238,7 @@
 		2B7E2FBF1976D3F700CB7E5B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				2B7E2FC61979165700CB7E5B /* Library */,
 				2B7E2FC21976D41E00CB7E5B /* Storyboards */,
 				2B7E2FC01976D40200CB7E5B /* Images */,
 			);
@@ -211,6 +248,11 @@
 		2B7E2FC01976D40200CB7E5B /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				2B7E2FE2197955BA00CB7E5B /* noimage.png */,
+				2B7E2FD719792CAE00CB7E5B /* emptycalendar.png */,
+				2B7E2FD519792ABD00CB7E5B /* calendar.jpg */,
+				2B7E2FDB19792EAD00CB7E5B /* button.png */,
+				2B7E2FDD19792F0200CB7E5B /* mapicon.png */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -221,6 +263,54 @@
 				2B7E2FBD1976D3F200CB7E5B /* US2Storyboard.storyboard */,
 			);
 			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		2B7E2FC61979165700CB7E5B /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				2B7E2FF519796CD000CB7E5B /* Pin.h */,
+				2B7E2FF619796CD000CB7E5B /* Pin.m */,
+				2B7E2FCD19791BD000CB7E5B /* AsyncImageView.h */,
+				2B7E2FCE19791BD000CB7E5B /* AsyncImageView.m */,
+			);
+			name = Library;
+			sourceTree = "<group>";
+		};
+		2B7E2FE51979577400CB7E5B /* AllEventFromArtist */ = {
+			isa = PBXGroup;
+			children = (
+				2B7E2FE819795B1A00CB7E5B /* Controller */,
+				2B7E2FE719795B1600CB7E5B /* Model */,
+				2B7E2FE619795B0B00CB7E5B /* View */,
+			);
+			name = AllEventFromArtist;
+			sourceTree = "<group>";
+		};
+		2B7E2FE619795B0B00CB7E5B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2B7E2FEC19795B9B00CB7E5B /* US2EventMapView.h */,
+				2B7E2FED19795B9B00CB7E5B /* US2EventMapView.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		2B7E2FE719795B1600CB7E5B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2B7E2FEF19795BE800CB7E5B /* US2EventMapProxy.h */,
+				2B7E2FF019795BE800CB7E5B /* US2EventMapProxy.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		2B7E2FE819795B1A00CB7E5B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2B7E2FF219795DB600CB7E5B /* US2EventMapViewController.h */,
+				2B7E2FF319795DB600CB7E5B /* US2EventMapViewController.m */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -298,9 +388,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B7E2FDC19792EAD00CB7E5B /* button.png in Resources */,
 				2B7E2F891976D13400CB7E5B /* InfoPlist.strings in Resources */,
 				2B7E2F911976D13400CB7E5B /* Images.xcassets in Resources */,
+				2B7E2FD619792ABD00CB7E5B /* calendar.jpg in Resources */,
 				2B7E2FBE1976D3F200CB7E5B /* US2Storyboard.storyboard in Resources */,
+				2B7E2FDE19792F0200CB7E5B /* mapicon.png in Resources */,
+				2B7E2FE3197955BA00CB7E5B /* noimage.png in Resources */,
+				2B7E2FD819792CAE00CB7E5B /* emptycalendar.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,7 +419,14 @@
 				2B7E2FB91976D35C00CB7E5B /* US2EventProxy.m in Sources */,
 				2B7E2FB61976D32500CB7E5B /* US2Event.m in Sources */,
 				2B7E2F8B1976D13400CB7E5B /* main.m in Sources */,
+				2B7E2FEE19795B9B00CB7E5B /* US2EventMapView.m in Sources */,
 				2B7E2FB31976D2DE00CB7E5B /* US2EventListViewController.m in Sources */,
+				2B7E2FF119795BE800CB7E5B /* US2EventMapProxy.m in Sources */,
+				2B7E2FF719796CD000CB7E5B /* Pin.m in Sources */,
+				2B7E2FCF19791BD000CB7E5B /* AsyncImageView.m in Sources */,
+				2B7E2FE119792FD200CB7E5B /* US2EventDetailView.m in Sources */,
+				2B7E2FD219791FD700CB7E5B /* US2EventDetailViewController.m in Sources */,
+				2B7E2FF419795DB600CB7E5B /* US2EventMapViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

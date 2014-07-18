@@ -7,7 +7,7 @@
 //
 
 #import "US2EventProxy.h"
-
+#import "US2Event.h"
 
 @implementation US2EventProxy
 
@@ -60,7 +60,8 @@
                     //NSLog(@"locationarrr: %@", artistEventLocation);
                     
                     NSArray *artistImageList = [artistVenue objectForKey:@"image"];
-
+                    
+                    US2Event *event = [[US2Event alloc] init];
                     
                     allArtistEvent = [NSDictionary dictionaryWithObjectsAndKeys:
                                      [artistVenue objectForKey:@"startDate"],
@@ -68,7 +69,9 @@
                                      [artistVenue objectForKey:@"url"],
                                      @"artistEventURL",
                                       [[artistEventImageGet objectAtIndex:2] objectForKey:@"#text"],
-                                      @"artisEventtImage",
+                                      @"artisEventtImageSmall",
+                                      [[artistEventImageGet objectAtIndex:4] objectForKey:@"#text"],
+                                      @"artisEventtImageLarge",
                                       [artistEventLocation objectForKey:@"city"],
                                       @"artistEventCity",
                                       [artistEventLocation objectForKey:@"country"],
@@ -88,6 +91,15 @@
                                       [attr objectForKey:@"artist"],
                                       @"artistName",
                                       nil];
+                    
+                    event.placeDate = [[NSMutableArray alloc] init];
+                    event.placeName = [[NSMutableArray alloc] init];
+                    [event.placeDate addObject:[artistVenue objectForKey:@"startDate"]];
+                    [event.placeName addObject:[artistEventImage objectForKey:@"name"]];
+                    
+                    NSLog(@"nameeee: %@", event.placeName);
+                    NSLog(@"dateeee: %@", event.placeDate);
+                    
                     [allArtistEventInfo addObject:allArtistEvent];
                     
                 }
