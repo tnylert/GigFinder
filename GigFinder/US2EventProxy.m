@@ -8,6 +8,7 @@
 
 #import "US2EventProxy.h"
 #import "US2Event.h"
+#import "US2Artist.h"
 
 @implementation US2EventProxy
 
@@ -47,6 +48,13 @@
                 NSDictionary *allArtistEvent;
                 NSMutableArray *allArtistEventInfo = [[NSMutableArray alloc] init];
                 
+                US2Event *events = [[US2Event alloc] init];
+                events.placeDate = [[NSMutableArray alloc] init];
+                events.placeName = [[NSMutableArray alloc] init];
+                
+                US2Artist *artist = [[US2Artist alloc] init];
+                
+                
                 for (NSInteger i = 0; i < [artistEvent count]; i++)
                 {
                     artistVenue = [artistEvent objectAtIndex:i];
@@ -61,7 +69,7 @@
                     
                     NSArray *artistImageList = [artistVenue objectForKey:@"image"];
                     
-                    US2Event *event = [[US2Event alloc] init];
+                    
                     
                     allArtistEvent = [NSDictionary dictionaryWithObjectsAndKeys:
                                      [artistVenue objectForKey:@"startDate"],
@@ -92,21 +100,18 @@
                                       @"artistName",
                                       nil];
                     
-                    event.placeDate = [[NSMutableArray alloc] init];
-                    event.placeName = [[NSMutableArray alloc] init];
-                    [event.placeDate addObject:[artistVenue objectForKey:@"startDate"]];
-                    [event.placeName addObject:[artistEventImage objectForKey:@"name"]];
-                    
-                    NSLog(@"nameeee: %@", event.placeName);
-                    NSLog(@"dateeee: %@", event.placeDate);
+                    [events.placeDate addObject:[artistVenue objectForKey:@"startDate"]];
+                    [events.placeName addObject:[artistEventImage objectForKey:@"name"]];
+                    artist.artistName = [attr objectForKey:@"artist"];
                     
                     [allArtistEventInfo addObject:allArtistEvent];
                     
                 }
                 
-                /*NSLog(@"artistVenue: %@", artistVenue);
-                NSLog(@"artistStartDate: %@", allArtistEvent);*/
-                //NSLog(@"allArtistEventArray: %@", allArtistEventInfo);
+                NSLog(@"nameeee: %@", events.placeName);
+                NSLog(@"dateeee: %@", events.placeDate);
+                NSLog(@"artistnamess: %@", artist.artistName);
+                
 
                 NSLog(@"isMain :%@", [NSThread isMainThread] ? @"YES" : @"NO");
 

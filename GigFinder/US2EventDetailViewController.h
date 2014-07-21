@@ -18,7 +18,11 @@
 @property (nonatomic, retain) NSString *city;
 @property (nonatomic, retain) NSString *country;
 @property (nonatomic, retain) NSString *eventImageURL;
+@property (nonatomic, retain) NSString *eventURL;
 @property (nonatomic, retain) NSArray *allArtistDic;
+@property (nonatomic, readwrite) double latitude;
+@property (nonatomic, readwrite) double longitude;
+
 
 - (IBAction)MoreFromArtistClicked:(id)sender;
 - (IBAction)artistDetailsClicked:(id)sender;

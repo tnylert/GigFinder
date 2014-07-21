@@ -30,12 +30,15 @@
 		2B7E2FD819792CAE00CB7E5B /* emptycalendar.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B7E2FD719792CAE00CB7E5B /* emptycalendar.png */; };
 		2B7E2FDC19792EAD00CB7E5B /* button.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B7E2FDB19792EAD00CB7E5B /* button.png */; };
 		2B7E2FDE19792F0200CB7E5B /* mapicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B7E2FDD19792F0200CB7E5B /* mapicon.png */; };
-		2B7E2FE119792FD200CB7E5B /* US2EventDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B7E2FE019792FD200CB7E5B /* US2EventDetailView.m */; };
 		2B7E2FE3197955BA00CB7E5B /* noimage.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B7E2FE2197955BA00CB7E5B /* noimage.png */; };
 		2B7E2FEE19795B9B00CB7E5B /* US2EventMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B7E2FED19795B9B00CB7E5B /* US2EventMapView.m */; };
-		2B7E2FF119795BE800CB7E5B /* US2EventMapProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B7E2FF019795BE800CB7E5B /* US2EventMapProxy.m */; };
 		2B7E2FF419795DB600CB7E5B /* US2EventMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B7E2FF319795DB600CB7E5B /* US2EventMapViewController.m */; };
 		2B7E2FF719796CD000CB7E5B /* Pin.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B7E2FF619796CD000CB7E5B /* Pin.m */; };
+		2BADAD09197D046800EBEB9D /* US2EventMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BADAD08197D046800EBEB9D /* US2EventMap.m */; };
+		2BADAD10197D057900EBEB9D /* US2ArtistDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BADAD0F197D057900EBEB9D /* US2ArtistDetailViewController.m */; };
+		2BADAD13197D059400EBEB9D /* US2Artist.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BADAD12197D059400EBEB9D /* US2Artist.m */; };
+		2BADAD16197D077B00EBEB9D /* US2ArtistProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BADAD15197D077B00EBEB9D /* US2ArtistProxy.m */; };
+		2BADAD18197D233D00EBEB9D /* Alert.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BADAD17197D233D00EBEB9D /* Alert.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,17 +85,22 @@
 		2B7E2FD719792CAE00CB7E5B /* emptycalendar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emptycalendar.png; sourceTree = "<group>"; };
 		2B7E2FDB19792EAD00CB7E5B /* button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button.png; sourceTree = "<group>"; };
 		2B7E2FDD19792F0200CB7E5B /* mapicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mapicon.png; sourceTree = "<group>"; };
-		2B7E2FDF19792FD200CB7E5B /* US2EventDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = US2EventDetailView.h; sourceTree = "<group>"; };
-		2B7E2FE019792FD200CB7E5B /* US2EventDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = US2EventDetailView.m; sourceTree = "<group>"; };
 		2B7E2FE2197955BA00CB7E5B /* noimage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = noimage.png; sourceTree = "<group>"; };
 		2B7E2FEC19795B9B00CB7E5B /* US2EventMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = US2EventMapView.h; sourceTree = "<group>"; };
 		2B7E2FED19795B9B00CB7E5B /* US2EventMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = US2EventMapView.m; sourceTree = "<group>"; };
-		2B7E2FEF19795BE800CB7E5B /* US2EventMapProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = US2EventMapProxy.h; sourceTree = "<group>"; };
-		2B7E2FF019795BE800CB7E5B /* US2EventMapProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = US2EventMapProxy.m; sourceTree = "<group>"; };
 		2B7E2FF219795DB600CB7E5B /* US2EventMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = US2EventMapViewController.h; sourceTree = "<group>"; };
 		2B7E2FF319795DB600CB7E5B /* US2EventMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = US2EventMapViewController.m; sourceTree = "<group>"; };
 		2B7E2FF519796CD000CB7E5B /* Pin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pin.h; sourceTree = "<group>"; };
 		2B7E2FF619796CD000CB7E5B /* Pin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Pin.m; sourceTree = "<group>"; };
+		2BADAD07197D046800EBEB9D /* US2EventMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = US2EventMap.h; sourceTree = "<group>"; };
+		2BADAD08197D046800EBEB9D /* US2EventMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = US2EventMap.m; sourceTree = "<group>"; };
+		2BADAD0E197D057900EBEB9D /* US2ArtistDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = US2ArtistDetailViewController.h; sourceTree = "<group>"; };
+		2BADAD0F197D057900EBEB9D /* US2ArtistDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = US2ArtistDetailViewController.m; sourceTree = "<group>"; };
+		2BADAD11197D059400EBEB9D /* US2Artist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = US2Artist.h; sourceTree = "<group>"; };
+		2BADAD12197D059400EBEB9D /* US2Artist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = US2Artist.m; sourceTree = "<group>"; };
+		2BADAD14197D077B00EBEB9D /* US2ArtistProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = US2ArtistProxy.h; sourceTree = "<group>"; };
+		2BADAD15197D077B00EBEB9D /* US2ArtistProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = US2ArtistProxy.m; sourceTree = "<group>"; };
+		2BADAD17197D233D00EBEB9D /* Alert.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Alert.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +160,7 @@
 		2B7E2F841976D13400CB7E5B /* GigFinder */ = {
 			isa = PBXGroup;
 			children = (
+				2BADAD0A197D052B00EBEB9D /* ArtistDetails */,
 				2B7E2FE51979577400CB7E5B /* AllEventFromArtist */,
 				2B7E2FAD1976D21E00CB7E5B /* EventList */,
 				2B7E2F8D1976D13400CB7E5B /* AppDelegate.h */,
@@ -229,8 +238,6 @@
 			children = (
 				2B7E2FBA1976D3D600CB7E5B /* US2EventListView.h */,
 				2B7E2FBB1976D3D600CB7E5B /* US2EventListView.m */,
-				2B7E2FDF19792FD200CB7E5B /* US2EventDetailView.h */,
-				2B7E2FE019792FD200CB7E5B /* US2EventDetailView.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -253,6 +260,7 @@
 				2B7E2FD519792ABD00CB7E5B /* calendar.jpg */,
 				2B7E2FDB19792EAD00CB7E5B /* button.png */,
 				2B7E2FDD19792F0200CB7E5B /* mapicon.png */,
+				2BADAD17197D233D00EBEB9D /* Alert.png */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -298,8 +306,8 @@
 		2B7E2FE719795B1600CB7E5B /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				2B7E2FEF19795BE800CB7E5B /* US2EventMapProxy.h */,
-				2B7E2FF019795BE800CB7E5B /* US2EventMapProxy.m */,
+				2BADAD07197D046800EBEB9D /* US2EventMap.h */,
+				2BADAD08197D046800EBEB9D /* US2EventMap.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -309,6 +317,43 @@
 			children = (
 				2B7E2FF219795DB600CB7E5B /* US2EventMapViewController.h */,
 				2B7E2FF319795DB600CB7E5B /* US2EventMapViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		2BADAD0A197D052B00EBEB9D /* ArtistDetails */ = {
+			isa = PBXGroup;
+			children = (
+				2BADAD0D197D054A00EBEB9D /* Controller */,
+				2BADAD0C197D054400EBEB9D /* Model */,
+				2BADAD0B197D053400EBEB9D /* View */,
+			);
+			name = ArtistDetails;
+			sourceTree = "<group>";
+		};
+		2BADAD0B197D053400EBEB9D /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		2BADAD0C197D054400EBEB9D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2BADAD11197D059400EBEB9D /* US2Artist.h */,
+				2BADAD12197D059400EBEB9D /* US2Artist.m */,
+				2BADAD14197D077B00EBEB9D /* US2ArtistProxy.h */,
+				2BADAD15197D077B00EBEB9D /* US2ArtistProxy.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		2BADAD0D197D054A00EBEB9D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2BADAD0E197D057900EBEB9D /* US2ArtistDetailViewController.h */,
+				2BADAD0F197D057900EBEB9D /* US2ArtistDetailViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -388,6 +433,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2BADAD18197D233D00EBEB9D /* Alert.png in Resources */,
 				2B7E2FDC19792EAD00CB7E5B /* button.png in Resources */,
 				2B7E2F891976D13400CB7E5B /* InfoPlist.strings in Resources */,
 				2B7E2F911976D13400CB7E5B /* Images.xcassets in Resources */,
@@ -417,15 +463,17 @@
 				2B7E2FBC1976D3D600CB7E5B /* US2EventListView.m in Sources */,
 				2B7E2F8F1976D13400CB7E5B /* AppDelegate.m in Sources */,
 				2B7E2FB91976D35C00CB7E5B /* US2EventProxy.m in Sources */,
+				2BADAD13197D059400EBEB9D /* US2Artist.m in Sources */,
 				2B7E2FB61976D32500CB7E5B /* US2Event.m in Sources */,
 				2B7E2F8B1976D13400CB7E5B /* main.m in Sources */,
+				2BADAD09197D046800EBEB9D /* US2EventMap.m in Sources */,
 				2B7E2FEE19795B9B00CB7E5B /* US2EventMapView.m in Sources */,
 				2B7E2FB31976D2DE00CB7E5B /* US2EventListViewController.m in Sources */,
-				2B7E2FF119795BE800CB7E5B /* US2EventMapProxy.m in Sources */,
 				2B7E2FF719796CD000CB7E5B /* Pin.m in Sources */,
+				2BADAD10197D057900EBEB9D /* US2ArtistDetailViewController.m in Sources */,
 				2B7E2FCF19791BD000CB7E5B /* AsyncImageView.m in Sources */,
-				2B7E2FE119792FD200CB7E5B /* US2EventDetailView.m in Sources */,
 				2B7E2FD219791FD700CB7E5B /* US2EventDetailViewController.m in Sources */,
+				2BADAD16197D077B00EBEB9D /* US2ArtistProxy.m in Sources */,
 				2B7E2FF419795DB600CB7E5B /* US2EventMapViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

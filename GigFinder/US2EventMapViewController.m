@@ -7,13 +7,12 @@
 //
 
 #import "US2EventMapViewController.h"
-#import "US2EventMapProxy.h"
-#import <MapKit/MapKit.h>
-#import <MapKit/MKAnnotation.h>
 #import "Pin.h"
 #import "US2Event.h"
+@import MapKit;
 
-@interface US2EventMapViewController ()<US2EventProxyDelegate>
+
+@interface US2EventMapViewController ()<UIAlertViewDelegate>
 {
     MKMapView *mapView;
     Pin *pin;
@@ -23,7 +22,7 @@
 
 @implementation US2EventMapViewController
 
-@synthesize latArray, longArray;
+@synthesize latArray, longArray, placeName, Date;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -34,10 +33,6 @@
     return self;
 }
 
-- (void)eventProxy:(US2EventMapProxy *)eventProxy retrievedLatitude:(CGFloat *)latitude retrievedLongtitude:(CGFloat *) longtitude
-{
-    
-}
 
 #define MAP_PADDING 1.1
 #define MINIMUM_VISIBLE_LATITUDE 0.01
@@ -61,17 +56,14 @@
     [mapView setDelegate:self];
     [mapView setMapType:MKMapTypeStandard];
     [mapView setZoomEnabled:YES];
-    [mapView setScrollEnabled:NO];
+    [mapView setScrollEnabled:YES];
     
     [self.view addSubview:mapView];
     
     MKCoordinateRegion region;
     
     US2Event *event = [[US2Event alloc] init];
-    
-    
-    NSLog(@"name: %@", event.placeName);
-    NSLog(@"date: %@", event.placeDate);
+
     
     //for loop
     for (int i = 0; i < [latArray count]; i++)
@@ -88,8 +80,8 @@
         //[mapView setRegion:region];
         
         pin = [[Pin alloc] init];
-        NSString *addressName = [event.placeDate objectAtIndex:i];
-        pin.title = [event.placeName objectAtIndex:i];
+        NSString *addressName = [Date objectAtIndex:i];
+        pin.title = [placeName objectAtIndex:i];
         pin.subtitle = addressName;
         pin.coordinate = regions.center;
         [mapView addAnnotation:pin];
@@ -99,6 +91,31 @@
     
     //[mapView addAnnotation:pin];
 }
+
+-(MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation
+{
+    
+    MKAnnotationView *annotationView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"loc"];
+    annotationView.canShowCallout = YES;
+    annotationView.rightCalloutAccessoryView = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+    
+    return annotationView;
+    
+}
+
+- (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control
+{
+    
+//    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://maps.apple.com/?daddr=%f,%f", view.annotation.coo, addlong]]];
+//    
+
+    id <MKAnnotation> annotation = view.annotation;
+    CLLocationCoordinate2D coordinate = annotation.coordinate;
+    
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://maps.apple.com/?daddr=%f,%f", coordinate.latitude, coordinate.longitude]]];
+    
+}
+
 
 - (void)didReceiveMemoryWarning
 {

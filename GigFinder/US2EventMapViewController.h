@@ -14,6 +14,10 @@
 
 @property (nonatomic, retain) NSMutableArray *latArray;
 @property (nonatomic, retain) NSMutableArray *longArray;
+@property (nonatomic, retain) NSMutableArray *placeName;
+@property (nonatomic, retain) NSMutableArray *Date;
+
+
 
 
 

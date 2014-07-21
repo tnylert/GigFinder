@@ -7,20 +7,22 @@
 //
 
 #import "US2EventDetailViewController.h"
-#import "US2EventDetailView.h"
 #import "US2EventMapViewController.h"
+#import "US2ArtistDetailViewController.h"
 
 @interface US2EventDetailViewController ()
 {
     NSMutableArray *latiArray;
     NSMutableArray *longtiArray;
+    NSMutableArray *placeName;
+    NSMutableArray *placeDate;
 }
 
 @end
 
 @implementation US2EventDetailViewController
 
-@synthesize month, date, eventPlaceName, artistName, fullDate, city, country, eventImageURL, EventDateLabel, eventImage, EventMonthLabel, EventPlaceNameLabel, FullDateLabel, moreFromArtistBtn, scrollView, cityCountrrLabel, allArtistDic;
+@synthesize month, date, eventPlaceName, artistName, fullDate, city, country, eventImageURL, EventDateLabel, eventImage, EventMonthLabel, EventPlaceNameLabel, FullDateLabel, moreFromArtistBtn, scrollView, cityCountrrLabel, allArtistDic, eventURL, latitude, longitude;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -88,8 +90,9 @@
 
 - (void) rightBarClicked
 {
-    NSString *textToShare = @"Ty ustwo";
-    UIImage *imageToShare = [UIImage imageNamed:@"noimage.png"];
+    NSString *textToShare = [NSString stringWithFormat:@"Com join us at %@ concert! Check out %@ for more info!", artistName, eventURL];
+    NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:eventImageURL]];
+    UIImage *imageToShare = [UIImage imageWithData:data];
     NSArray *itemsToShare = @[textToShare, imageToShare];
     UIActivityViewController *activityVC = [[UIActivityViewController alloc] initWithActivityItems:itemsToShare applicationActivities:nil];
     activityVC.excludedActivityTypes = @[UIActivityTypePrint, UIActivityTypeCopyToPasteboard, UIActivityTypeAssignToContact, UIActivityTypeSaveToCameraRoll]; //or whichever you don't need
@@ -102,24 +105,40 @@
     
     latiArray = [[NSMutableArray alloc] init];
     longtiArray = [[NSMutableArray alloc] init];
+    placeName = [[NSMutableArray alloc] init];
+    placeDate = [[NSMutableArray alloc] init];
     
     for (int i = 0; i < [allArtistDic count]; i++)
     {
         NSDictionary *innerDic = [allArtistDic objectAtIndex:i];
         NSString *latString = [innerDic objectForKey:@"artistVenueLatitude"];
         NSString *longString = [innerDic objectForKey:@"artistVenueLongtitude"];
+        NSString *placeNameString = [innerDic objectForKey:@"artistEventLocationName"];
+        NSString *placeDateString = [innerDic objectForKey:@"artistEventStartDate"];
         [latiArray addObject:latString];
         [longtiArray addObject:longString];
+        [placeName addObject:placeNameString];
+        [placeDate addObject:placeDateString];
     }
+    
     map.latArray = latiArray;
     map.longArray = longtiArray;
+    map.placeName = placeName;
+    map.Date = placeDate;
     
     [self.navigationController pushViewController:map animated:YES];
 }
 
 - (IBAction)artistDetailsClicked:(id)sender {
+    
+    US2ArtistDetailViewController *artist = [self.storyboard instantiateViewControllerWithIdentifier:@"artist"];
+    artist.artistName = [artistName stringByReplacingOccurrencesOfString:@" " withString:@"+"];
+    [self.navigationController pushViewController:artist animated:YES];
 }
 
 - (IBAction)takeMeThereClicked:(id)sender {
+    
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://maps.apple.com/?daddr=%f,%f", latitude, longitude]]];
+    
 }
 @end
